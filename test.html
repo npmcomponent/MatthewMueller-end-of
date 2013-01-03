@@ -1,6 +1,12 @@
 <html>
 <head>
   <title>end-of component</title>
+  <style>
+    #content {
+      padding: 30px;
+    }
+
+  </style>
 </head>
 <body>
   <h1>end-of component</h1>
@@ -11,7 +17,9 @@
     var endOf = require('end-of');
 
     endOf(content, function(end) {
-      if(end) console.log('end');
+      console.log(end);
+      if(!end) return;
+      content.scrollTop = content.scrollHeight;
     });
 
   </script>

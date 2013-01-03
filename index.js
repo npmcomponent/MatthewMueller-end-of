@@ -5,6 +5,15 @@
 var events = require('event');
 
 /**
+ * Command and control modifier keys
+ */
+
+var keys = {
+  91 : 'command',
+  17 : 'control'
+};
+
+/**
  * Export `end-of`
  */
 
@@ -18,7 +27,15 @@ module.exports = endOf;
  */
 
 function endOf(el, fn) {
-  events.bind(el, 'keyup', function(e) { return fn(check(e)); });
+  var modifier = false;
+
+  events.bind(el, 'keyup', function(e) {
+    // More complicated because we need to use keyup
+    var mod = keys[e.which];
+    if(mod) { modifier = true; return; }
+    else if(modifier) { modifier = false; return; }
+    return fn(check(e));
+  });
 }
 
 /**

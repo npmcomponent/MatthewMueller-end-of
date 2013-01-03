@@ -1,7 +1,7 @@
 
 # end-of
 
-  Check to see if you're at the end of an input element or textarea. Useful for "drifting" textareas.
+  Check to see if you're at the end of an input element or textarea. Useful for "drifting" textareas with additional padding at the bottom.
 
 ## Installation
 
