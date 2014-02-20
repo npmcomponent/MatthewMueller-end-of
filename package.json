@@ -1,0 +1,10 @@
+{
+  "name": "matthewmueller-end-of",
+  "description": "check to see if you're at the end of an input element or textarea",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component-event": "git://github.com/npmcomponent/component-event.git"
+  },
+  "license": "MIT"
+}

@@ -2,7 +2,7 @@
  * Module dependencies
  */
 
-var events = require('event');
+var events = require('component-event');
 
 /**
  * Command and control modifier keys
